@@ -11,7 +11,7 @@ const db = drizzle(pool);
 export default async function handler(req, res) {
   if (req.method === 'GET') {
     try {
-      const result = await db.select().from(jokes).orderBy(jokes.createdAt.desc()).limit(10);
+      const result = await db.select().from(jokes).orderBy(jokes.createdAt.desc()).limit(50);
       res.status(200).json(result);
     } catch (error) {
       console.error('Error fetching jokes:', error);

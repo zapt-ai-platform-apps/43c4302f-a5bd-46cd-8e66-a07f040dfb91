@@ -1,6 +1,6 @@
 {
   "name": "joke-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Joke app with SolidJS, Tailwind, and Vite",
   "scripts": {
     "dev": "vite",
@@ -10,9 +10,15 @@
     "migrate": "node -e \"require('drizzle-orm/node-postgres').migrate(require('drizzle-orm/node-postgres').drizzle(new (require('pg').Pool)({connectionString: process.env.COCKROACH_DB_URL})), {migrationsFolder: './drizzle'}).then(() => console.log('Migration complete'))\""
   },
   "dependencies": {
+    "@supabase/auth-ui-shared": "^0.1.8",
+    "@supabase/auth-ui-solid": "^0.3.6",
+    "@supabase/supabase-js": "^2.10.0",
     "solid-js": "^1.7.5",
     "drizzle-orm": "^0.30.0",
-    "pg": "^8.11.1"
+    "pg": "^8.11.1",
+    "solid-markdown": "^2.0.13",
+    "file-saver": "^2.0.5",
+    "docx": "^7.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
